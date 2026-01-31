@@ -3,41 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelancer Portfolio</title>
+    <title>Elite Auto Detailing | Professional Car Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-black text-white overflow-x-hidden">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-2xl font-bold tracking-tighter text-blue-400">DEV.IT</h1>
-        <div class="space-x-6 text-gray-400">
-            <a href="#" class="hover:text-white transition">Work</a>
-            <a href="#" class="hover:text-white transition">About</a>
-            <a href="mailto:your@email.com" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition">Contact</a>
+    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-black italic tracking-tighter text-blue-500">ELITE<span class="text-white">SHINE</span></div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#services" class="hover:text-blue-500 transition">Services</a>
+            <a href="#gallery" class="hover:text-blue-500 transition">Gallery</a>
+            <a href="#about" class="hover:text-blue-500 transition">About</a>
+            <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700 transition">Book Now</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto mt-20 px-6 text-center">
-        <h2 class="text-5xl md:text-7xl font-extrabold mb-6">Building digital <span class="text-blue-500">experiences.</span></h2>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto">I'm a freelancer specializing in IT solutions and modern web development. Currently available for new projects.</p>
-    </header>
-
-    <section class="max-w-6xl mx-auto my-32 px-6 grid md:grid-cols-2 gap-8">
-        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition">
-            <span class="text-blue-400 text-sm font-mono">01. Development</span>
-            <h3 class="text-2xl font-bold mt-2">E-commerce Platform</h3>
-            <p class="text-gray-400 mt-4">Built a custom storefront using modern web technologies.</p>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=400" class="floating absolute top-20 left-[10%] w-48 rounded-lg opacity-20 hidden md:block" alt="Car Detail">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=400" class="floating absolute bottom-20 right-[15%] w-64 rounded-lg opacity-30 hidden md:block" style="animation-delay: 2s;" alt="Car Polish">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=400" class="floating absolute top-40 right-[10%] w-56 rounded-lg opacity-20 hidden md:block" style="animation-delay: 4s;" alt="Luxury Car">
         </div>
-        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition">
-            <span class="text-blue-400 text-sm font-mono">02. IT Systems</span>
-            <h3 class="text-2xl font-bold mt-2">Cloud Infrastructure</h3>
-            <p class="text-gray-400 mt-4">Optimized server workflows for a local startup.</p>
+
+        <div class="relative z-10 text-center px-6" data-aos="zoom-in">
+            <h1 class="text-6xl md:text-8xl font-black uppercase italic leading-none">The Ultimate<br><span class="text-blue-500">Showroom</span> Finish.</h1>
+            <p class="mt-6 text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">Premium ceramic coating, interior restoration, and paint correction for those who demand perfection.</p>
+            <div class="mt-10">
+                <a href="#services" class="border-2 border-white px-8 py-3 font-bold hover:bg-white hover:text-black transition duration-300">VIEW SERVICES</a>
+            </div>
         </div>
     </section>
 
-    <footer class="text-center py-10 border-t border-gray-800 text-gray-500 text-sm">
-        &copy; 2026 Your Name. Built with AI + GitHub.
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up">
+                <div class="text-4xl mb-4">🧼</div>
+                <h3 class="text-xl font-bold mb-2">Exterior Wash</h3>
+                <p class="text-gray-400">Hand wash with pH-neutral shampoo and microfiber drying.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl mb-4">✨</div>
+                <h3 class="text-xl font-bold mb-2">Paint Correction</h3>
+                <p class="text-gray-400">Removing swirls and scratches to restore deep gloss.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl mb-4">🛡️</div>
+                <h3 class="text-xl font-bold mb-2">Ceramic Coating</h3>
+                <p class="text-gray-400">Long-term protection and hydrophobic performance.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up">
+                <div class="text-4xl mb-4">🪑</div>
+                <h3 class="text-xl font-bold mb-2">Interior Detail</h3>
+                <p class="text-gray-400">Deep steam cleaning and leather conditioning.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl mb-4">🏎️</div>
+                <h3 class="text-xl font-bold mb-2">Engine Bay</h3>
+                <p class="text-gray-400">Degreasing and dressing for a factory-fresh look.</p>
+            </div>
+            <div class="glass p-8 rounded-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl mb-4">💎</div>
+                <h3 class="text-xl font-bold mb-2">Full Transformation</h3>
+                <p class="text-gray-400">The works. Inside and out, no bolt left untouched.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Recent Work</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d59085?auto=format&fit=crop&q=80&w=400" class="rounded-xl hover:scale-105 transition duration-500" alt="Work 1">
+                <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&q=80&w=400" class="rounded-xl hover:scale-105 transition duration-500" alt="Work 2">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=400" class="rounded-xl hover:scale-105 transition duration-500" alt="Work 3">
+                <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=400" class="rounded-xl hover:scale-105 transition duration-500" alt="Work 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6">About Me</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+            I started EliteShine with a single bucket and a passion for cars. Today, I provide professional-grade detailing for luxury and daily vehicles alike. My goal isn't just to clean—it's to preserve and protect your investment using the best chemicals and techniques in the industry.
+        </p>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-xl mx-auto" data-aos="fade-up">
+        <div class="glass p-10 rounded-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">Get a Quote</h2>
+            <form action="https://formspree.io/f/your_id" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Full Name" class="w-full bg-zinc-900 border border-zinc-700 p-3 rounded-lg focus:outline-none focus:border-blue-500" required>
+                <input type="email" name="email" placeholder="Email Address" class="w-full bg-zinc-900 border border-zinc-700 p-3 rounded-lg focus:outline-none focus:border-blue-500" required>
+                <select name="service" class="w-full bg-zinc-900 border border-zinc-700 p-3 rounded-lg focus:outline-none focus:border-blue-500">
+                    <option>Paint Correction</option>
+                    <option>Interior Detail</option>
+                    <option>Ceramic Coating</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="Vehicle Model & Year" class="w-full bg-zinc-900 border border-zinc-700 p-3 rounded-lg focus:outline-none focus:border-blue-500" required></textarea>
+                <button type="submit" class="w-full bg-blue-600 font-bold py-3 rounded-lg hover:bg-blue-700 transition">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-sm">
+        &copy; 2026 EliteShine Detailing. All Rights Reserved.
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
 </html>
